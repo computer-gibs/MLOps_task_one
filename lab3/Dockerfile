@@ -5,4 +5,4 @@ COPY requirements.txt ./requirements.txt
 RUN pip3 install -r requirements.txt
 COPY . .
 RUN chmod +x ./pipeline.sh
-CMD ["/bin/bash", "-c", "./pipeline.sh"]
+CMD ["/bin/bash", "-c", "exec /app/pipeline.sh"]
