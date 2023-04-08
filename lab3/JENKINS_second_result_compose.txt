@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    stages {
+        stage('Get github repo'){
+            steps{
+                git branch: 'main', url: 'https://github.com/computer-gibs/MLOps_task_one.git'
+            }
+        }
+        stage('Build docker file'){
+            steps{
+                sh 'docker-compose -f lab3/docker-compose.yml build'
+            }
+        }
+        stage('Run docker image'){
+            steps{
+                sh 'docker-compose -f lab3/docker-compose.yml up'
+            }
+        }
+    }
+}
+
