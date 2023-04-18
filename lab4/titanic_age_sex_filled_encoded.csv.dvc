@@ -1,0 +1,4 @@
+outs:
+- md5: 6c4826385958fb72f7f52a6bbe7e3bb6
+  size: 12078
+  path: titanic_age_sex_filled_encoded.csv
